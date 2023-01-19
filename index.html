@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do-List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="title">
+      <h1 class="name">To do List</h1>
+      <span class="tools">
+        <button class="addBtn">추가</button>
+        <select name="sortStd" id="sort">
+          <option value="default">====정렬기준 선택====</option>
+          <option value="우선순위 정렬">우선순위 정렬</option>
+          <option value="이름순 정렬">이름순 정렬</option>
+          <option value="시간순 정렬">시간순 정렬</option>
+        </select>
+      </span>
+    </div>
+    <div id="schedule">
+      <table>
+        <tr class="header">
+          <th>SUN</th>
+          <th>MON</th>
+          <th>TUE</th>
+          <th>WEN</th>
+          <th>TUR</th>
+          <th>FRI</th>
+          <th>SAT</th>
+        </tr>
+        <tr class="contents">
+          <td class="sun"></td>
+          <td class="mon"></td>
+          <td class="tue"></td>
+          <td class="wen"></td>
+          <td class="tur"></td>
+          <td class="fri"></td>
+          <td class="sat"></td>
+        </tr>
+      </table>
+    </div>
+    <div id="modal">
+      <button class="close-btn">X</button>
+      <br />
+      <label for="todo">일정 : </label>
+      <input type="text" id="todo" />
+      <label for="status">중요도 : </label>
+      <select name="status" id="status">
+        <option value="상">상</option>
+        <option value="중">중</option>
+        <option value="하">하</option>
+      </select>
+      <br /><br />
+      <span>요일 : </span>
+      <select name="startDay" class="start-day">
+        <option value="일">일</option>
+        <option value="월">월</option>
+        <option value="화">화</option>
+        <option value="수">수</option>
+        <option value="목">목</option>
+        <option value="금">금</option>
+        <option value="토">토</option>
+      </select>
+      <span>~</span>
+      <select name="endDay" class="end-day">
+        <option value="일">일</option>
+        <option value="월">월</option>
+        <option value="화">화</option>
+        <option value="수">수</option>
+        <option value="목">목</option>
+        <option value="금">금</option>
+        <option value="토">토</option>
+      </select>
+      <br /><br />
+      <span>시간 : </span>
+      <input type="time" class="start-time" />
+      <span>~</span>
+      <input type="time" class="end-time" />
+      <br /><br />
+      <button class="reg-btn">등록</button>
+      <button class="modify_btn">수정</button>
+      <button class="modified_btn">수정 완료</button>
+      <button class="del_btn">삭제</button>
+      <button class="cancel-btn">취소</button>
+    </div>
+    <div class="bg"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
